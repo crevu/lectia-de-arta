@@ -1,0 +1,130 @@
+extends  ../_skeleton
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+include ../elements/_ui-thumbnail-default
+include ../elements/_ui-pagination-bootstrap
+//- Title
+block title
+  title= cfg.nav.news.submenu.gridNews3columns.title
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.news,
+    cfg.nav
+    )
+  +breadcrumb-classic(
+  cfg.nav.news.submenu.gridNews3columns.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.news.title,
+      "href": cfg.nav.news.href
+    },
+    2: {
+      "title": cfg.nav.news.submenu.gridNews3columns.title,
+      "href": cfg.nav.news.submenu.gridNews3columns.href
+    }
+  })
+  // Page Content
+  main.page-content
+    #fb-root
+    // Latest news
+    section.section-70.section-md-114.bg-catskill
+      .shell
+        .range.text-sm-left.range-xs-center
+          .cell-sm-6.cell-md-4
+            article.post-news.view-animate.fadeInUpSmall
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive(src="images/blog/news-01-370x240.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) Thinking about Spring
+                .offset-top-20
+                  p When we are lucky enough to have a few warm sunny days, many of our thoughts turn to spring ahead.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+          .cell-sm-6.cell-md-4.offset-top-30.offset-sm-top-0
+            article.post-news.view-animate.fadeInUpSmall.delay-04
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive(src="images/blog/news-02-370x240.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) 3 Open-Ended Activities for Preschoolers
+                .offset-top-20
+                  p In our fast-paced, over-scheduled weeks, it can sometimes be a great benefit to slow down and dig into some good hands-on fun.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+          .cell-sm-6.cell-md-4.offset-top-30.offset-md-top-0
+            article.post-news.view-animate.fadeInUpSmall.delay-06
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive(src="images/blog/news-04-370x240.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href).
+                    Exploring Light and Dark
+                .offset-top-20
+                  p This time of year, we are seeing the first snowfalls and the weather is suddenly colder.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+          .cell-sm-6.cell-md-4.offset-top-30
+            article.post-news.view-animate.fadeInUpSmall
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive(src="images/blog/news-05-370x240.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href).
+                    2016/17 Entertainment Books for Your Children
+                .offset-top-20
+                  p Kids Tree Preschool is excited to be joining in the Entertainment Membership Fundraising initiative again this year.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+          .cell-sm-6.cell-md-4.offset-top-30
+            article.post-news.view-animate.fadeInUpSmall.delay-04
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive(src="images/blog/news-03-370x240.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) Busy Day at Kids Tree or  How We Spent This Friday
+                .offset-top-20
+                  p Friday was a very busy day for our school! There was a lot going on, mainly for the Fundraiser: a big event organised by ForThe RecordTV in association with Brighton Unsigned.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+
+          .cell-sm-6.cell-md-4.offset-top-30
+            article.post-news.view-animate.fadeInUpSmall.delay-06
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive(src="images/blog/news-06-370x240.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) Join Us for Summer
+                .offset-top-20
+                  p Looking for a summer program for your preschooler? We have the openings for our  summer session.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+
+
+        .offset-top-60.text-md-left
+          +pagination-bootstrap(null, 1, 3)
+  .bg-catskill
+    // Page Footer
+    include ../sections/_section-footer-corporate

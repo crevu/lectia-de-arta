@@ -1,0 +1,220 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+
+//- Title
+block title
+  title= cfg.nav.elements.submenu.typography.title
+
+//- Page
+block page
+
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.elements,
+    cfg.nav
+    )
+
+  +breadcrumb-classic(
+  cfg.nav.elements.submenu.typography.title,
+    {0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.elements.title,
+      "href": cfg.nav.elements.href
+    },
+    2: {
+      "title": cfg.nav.elements.submenu.typography.title,
+      "href": cfg.nav.elements.submenu.typography.href
+    }
+   })
+
+  // Page Content
+  main.page-content.section-70.section-md-114
+
+    // Heading Style
+    section.text-sm-left
+      .shell
+        .range.range-xs-center.range-lg-left
+          .cell-xs-10.cell-lg-4.inset-lg-left-30.cell-lg-push-2
+            div
+              h1 Heading 1
+            .offset-top-20
+              h2 Heading 2
+            .offset-top-20
+              h3 Heading 3
+            h4 Heading 4
+            h5 Heading 5
+            .offset-top-20
+              h6 Heading 6
+            .offset-top-35
+              p Default Paragraph
+            .offset-top-10
+              p.small Small Paragraph
+          .cell-xs-10.cell-lg-8.inset-lg-right-10.cell-lg-push-1.offset-top-50.offset-lg-top-0
+            h1 H1 Roboto Slab 72px/80px
+            p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+            .offset-top-50.ofset-lg-top-85
+              h2 H2 Roboto Slab 44px/56px
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+            .offset-top-50.ofset-lg-top-85
+              h3 H3 Open Sans 30px/36px
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+            .offset-top-50.ofset-lg-top-85
+              h4 H4 Roboto Slab 24px/36px
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+            .offset-top-50.ofset-lg-top-85
+              h5 H5 Open Sans 20px/28px
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+            .offset-top-50.ofset-lg-top-85
+              h6 H6 Roboto Slab 18px/22px
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+        .range.range-xs-center.range-lg-left.offset-top-50.offset-lg-top-110
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Blockquote
+
+            .offset-top-35
+              .quote-classic-boxed.text-left
+                .quote-body
+                  q Words truly can't express how grateful I am that a preschool like this exists. I thought that a place like this was a mythical unicorn that parents searched for, but never found. I will definitely recommend your preschool to my friends who have children and are looking for a good place to teach them.
+                  .offset-top-30.text-right
+                    cite.font-accent Debra Banks
+                    .offset-top-5
+                      p.text-dark.text-italic Sales manager
+        .range.range-xs-center.range-lg-left.offset-top-50.offset-lg-top-110
+          .cell-xs-10.cell-lg-8
+            h2.text-bold HTML Text Elements
+
+            .offset-top-35.offset-lg-top-56
+              p
+                a(href="#") Link Text
+                = " "
+                a(href="#").hover Hover link
+                = " "
+                a.active(href="#") Text Press Link
+                = " "
+                span Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for on our official web resource.
+                = " "
+                b This is a bold text
+                = " "
+                i Italic text
+                = " "
+                span Their work transforms the way we understand the world, advancing and creating fields of study.
+                = " "
+                mark Highlighted text
+
+              p With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page, as well as its elements.
+                span.text-madison(data-toggle="tooltip" data-placement="top" title="Online Course") Tooltips
+                = " "
+                span Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, and contains concise texts.
+                = " "
+                span.text-strike Strickethrough text
+                = " "
+                span.text-underline Underline text
+        .range.range-xs-center.range-lg-left.offset-top-50.offset-lg-top-110
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Unordered and Ordered Lists
+
+            .offset-top-35.offset-lg-top-56
+              p We specialize in a variety of pre-kindergarten programs . Our aim is to deliver the top level of education.
+              ul.list-marked.list.offset-top-10
+                li Pre-Kindergarten
+                li Kindergarten
+                li Preschool
+                li Junior Kindergarten
+                li Infant & Baby Care
+              p We specialize in a variety of pre-kindergarten programs . Our aim is to deliver the top level of education.
+              ol.list.list-numbered.text-left
+                li
+                  span.text-dark Pre-Kindergarten
+                li
+                  span.text-dark Kindergarten
+                li
+                  span.text-dark Preschool
+                li
+                  span.text-dark Junior Kindergarten
+                li
+                  span.text-dark Infant & Baby Care
+
+        .range.offset-top-50.offset-lg-top-133.range-xs-center.range-lg-lefrt
+          .cell-xs-10.cell-lg-12
+            .text-sm-left
+              h2.text-bold Icon List
+
+          .cell-xs-10.cell-lg-12
+            .range.text-md-left.offset-top-50
+              .cell-sm-8.cell-md-4
+                .unit.unit-sm.unit-sm-horizontal.text-sm-left
+                  .unit-left
+                    span.icon.icon-lg.mdi.mdi-school.icon-primary
+                  .unit-body
+                    .offset-top-10
+                      h6.text-bold Our mission
+                      p Our mission is to attract children by providing Best in Class educational solutions and fostering a comfortable program for them.
+              .cell-sm-8.cell-md-4.offset-top-50.offset-md-top-0
+                .unit.unit-sm.unit-sm-horizontal.text-sm-left
+                  .unit-left
+                    span.icon.icon-lg.mdi.mdi-domain.icon-primary
+                  .unit-body
+                    .offset-top-10
+                      h6.text-bold Teachers
+                      p Preschool teachers teach children ages 3 to 5 about the basics of subjects like reading, writing, math, and science.
+              .cell-sm-8.cell-md-4.offset-top-50.offset-md-top-0
+                .unit.unit-sm.unit-sm-horizontal.text-sm-left
+                  .unit-left
+                    span.icon.icon-lg.mdi.mdi-account-multiple.icon-primary
+                  .unit-body
+                    .offset-top-10
+                      h6.text-bold Children
+                      p Among the students whom we teach at our preschool, there are children from all over the state, and we treat all them equally.
+
+        .range.range-xs-center.range-lg-left.text-lg-left.offset-top-60.offset-sm-top-110
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Image Centered
+
+            .offset-top-35.offset-lg-top-56
+              img.img-responsive(width=770 height=485 src="images/typography-01-770x432.jpg" alt="")
+            .inset-lg-left-20
+              p.text-gray.offset-top-20.inset-left-lg-30.text-italic Students
+            .offset-top-20
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+        .range.range-xs-center.range-lg-left.offset-top-50.offset-lg-top-110.text-sm-left
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Image Left
+
+            .range.offset-top-35.offset-lg-top-56
+              .cell-sm-6
+                img.img-responsive.reveal-inline-block(width=350 height=220 src="images/typography-02-370x370.jpg" alt="")
+              .cell-sm-6
+                .inset-sm-left-30
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+        .range.range-xs-center.range-lg-left.offset-top-50.offset-lg-top-110.text-sm-left
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Image Right
+
+            .range.offset-top-35.offset-lg-top-56
+              .cell-sm-6.cell-sm-push-2.text-sm-right
+                img.img-responsive.reveal-inline-block(width=350 height=220 src="images/typography-02-370x370.jpg" alt="")
+              .cell-sm-6.cell-sm-push-1
+                .inset-sm-right-30
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+
+  // Page Footer
+  include ../sections/_section-footer-corporate

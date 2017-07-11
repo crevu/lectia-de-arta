@@ -1,0 +1,144 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-parallax
+include ../elements/_widget-flickrfeed
+include ../elements/_ui-rd-navbar-minimal
+
+//- Title
+block title
+  title= cfg.nav.pages.submenu.layouts.submenu.headerMinimalFooterCenter.title
+
+//- Page
+block page
+  // Page Header
+  header.page-head.header-panel-absolute
+    //- RD Navbar
+    +rd-navbar-minimal(
+    'rd-navbar-minimal',
+    {
+      "data-lg-auto-height": "true",
+      "data-auto-height": "false",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-md-device-layout": 'rd-navbar-static',
+      "data-lg-device-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+
+  // Page Content
+  main.page-content
+    //- Welcome
+    section
+      // Swiper
+      .swiper-container.swiper-slider(data-height="100vh" data-loop="false" data-dragable="false" data-min-height="480px" data-slide-effect="true")
+        .swiper-wrapper
+          .swiper-slide(data-slide-bg='images/slide-01-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-right.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) Play, Explore and Learn.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default Programs of Kids Tree Preschool include world-class curriculum and knowledgeable child development professionals that meet the needs of children at every age and stage.
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-madison.btn-ellipse Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-primary-transparent.btn-ellipse.veil.reveal-lg-inline-block Learn More
+          .swiper-slide(data-slide-bg='images/slide-02-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-left.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) A Perfect Learning Center for Your Kids.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default Any successful career starts with good education. At our learning center, your children will have deeper knowledge of all necessary subjects that will be especially useful for them.
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-ellipse.btn-madison Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-ellipse.btn-primary-transparent.veil.reveal-lg-inline-block Learn More
+          .swiper-slide(data-slide-bg='images/slide-03-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-right.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) We Offer Different Kinds of Activities.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default With us, your kid will enjoy plenty of different activities that will develop them and act as a perfect ground for further development. Explore the bright future of your child at Kids Tree Preschool!
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-ellipse.btn-madison Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-ellipse.btn-primary-transparent.veil.reveal-lg-inline-block Learn More
+        // Swiper Pagination
+        .swiper-pagination
+
+    // Latest news
+    section.bg-catskill
+      .shell-wide.section-70.section-md-114
+        h2.home-headings-custom.text-bold.view-animate.fadeInUpSmall.delay-06 Latest News
+
+        .range.offset-top-60.text-left.range-xs-center
+          .cell-sm-6.cell-md-3
+            article.post-news.post-news-mod-1.view-animate.fadeInLeftSm.delay-04
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive.img-fullwidth(src="images/blog/news-04-770x500.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) Mother’s Day
+                .offset-top-20
+                  p Mother’s Day is a celebration honoring the mother of the family, as well as motherhood, maternal bonds, and the influence of mothers in society.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+          .cell-sm-6.cell-md-3.offset-top-30.offset-sm-top-0
+            article.post-news.post-news-mod-1.view-animate.fadeInLeftSm.delay-06
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive.img-fullwidth(src="images/blog/news-03-770x500.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) Painting Class
+                .offset-top-20
+                  p In our kids painting classes, we guarantee the best personalized instruction and one-on-one guidance for every single child who walks through our door.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+
+          .cell-sm-6.cell-md-3.offset-top-30.offset-md-top-0
+            article.post-news.post-news-mod-1.view-animate.fadeInLeftSm.delay-08
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive.img-fullwidth(src="images/blog/news-08-420x270.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) Our New Teacher
+                .offset-top-20
+                  p We are glad to welcome Mary Johnson, our new teacher. She now teaches the class of 5 children aged up to 7 years old at Kids Tree Preschool.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+          .cell-sm-6.cell-md-3.offset-top-30.offset-md-top-0
+            article.post-news.post-news-mod-1.view-animate.fadeInLeftSm.delay-1
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive.img-fullwidth(src="images/blog/news-09-420x270.jpg", width="370", height="240", alt="")
+              .post-news-body
+                h6
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) We Integrate Creativity
+                .offset-top-20
+                  p All children need to be truly creative is the freedom to commit themselves completely to the effort and make whatever activity they are doing their own.
+                .post-news-meta.offset-top-20
+                  span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                  span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+
+        .offset-top-50.view-animate.fadeInUpSmall
+          a(href= cfg.nav.news.submenu.modernNews.href).btn.btn-ellipse.btn-primary View All News Posts
+
+  include ../sections/_section-footer-center

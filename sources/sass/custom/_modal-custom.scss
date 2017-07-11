@@ -1,0 +1,48 @@
+// Modal window
+//-------------------------------------
+
+.modal {
+  background: rgba($black,.5);
+}
+
+.modal-content {
+  background-color: transparent;
+  padding: 0;
+  border:none;
+  @media (min-width: $screen-sm-min) {
+    box-shadow: 2px 38px 44px -15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.modal-body,
+.modal-header {
+  padding: 0;
+  border:none;
+}
+
+.modal-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.modal-dialog {
+  top: 60px;
+}
+@media (min-width: 768px){
+  .modal-dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%,-50%)!important);
+  }
+}
+
+
+.close{
+  color: $white;
+  opacity: 1;
+  transition:250ms;
+  &:hover {
+    color: $brand-primary;
+    opacity: 1;
+  }
+}

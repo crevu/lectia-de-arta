@@ -1,0 +1,157 @@
+extends  ../_skeleton
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+include ../elements/_ui-thumbnail-default
+include ../elements/_ui-pagination-bootstrap
+//- Title
+block title
+  title= cfg.nav.news.submenu.classicNews.title
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.news,
+    cfg.nav
+    )
+  +breadcrumb-classic(
+  cfg.nav.news.submenu.classicNews.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.news.title,
+      "href": cfg.nav.news.href
+    },
+    2: {
+      "title": cfg.nav.news.submenu.classicNews.title,
+      "href": cfg.nav.news.submenu.classicNews.href
+    }
+  })
+  // Page Content
+  main.page-content
+    #fb-root
+    // Latest news
+    section.section-70.section-md-114.bg-catskill
+      .shell
+        .range.range-xs-center
+          .cell-md-8.text-md-left
+            article.post-news.post-news-wide.view-animate.fadeInUpSmall
+              a(href= cfg.nav.news.submenu.newsPostPage.href)
+                img.img-responsive(src="images/blog/news-01-770x500.jpg", width="770", height="500", alt="")
+              .post-news-body
+                h4.text-primary.text-bold
+                  a(href= cfg.nav.news.submenu.newsPostPage.href) Thinking about Spring
+                .offset-top-20
+                  p When we are lucky enough to have a few warm sunny days, many of our thoughts turn to spring ahead.  Are those snowbells popping up?  Is the dirt soft enough for digging?  Did you hear birds on your walk to school?
+                .offset-top-20
+                  ul.post-news-meta.list.list-inline.list-inline-xl
+                    li
+                      span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                      span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+                    li
+                      span.icon.icon-xs.mdi.mdi-account.text-middle.text-madison
+                      span.text-middle.inset-left-10.text-italic.text-primary Ronald Austin
+                    li.pull-lg-right.reveal-block.offset-top-20.offset-lg-top-10
+                        .tags-list.group.group-sm
+                          a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) News
+                          a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Spring
+                          a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Activities
+            .offset-top-30
+              article.post-news.post-news-wide.view-animate.fadeInUpSmall
+                a(href= cfg.nav.news.submenu.newsPostPage.href)
+                  img.img-responsive(src="images/blog/news-06-770x500.jpg", width="770", height="500", alt="")
+                .post-news-body
+                  h4.text-primary.text-bold
+                    a(href= cfg.nav.news.submenu.newsPostPage.href) 3 Open-Ended Activities for Preschoolers
+                  .offset-top-20
+                    p In our fast-paced, over-scheduled weeks, it can sometimes be a great benefit to slow down and dig into some good hands-on fun.  Instead of packing up and heading for fun away from home, try looking at home for the fun.  Here are some simple, inexpensive, ways to have open-ended fun with your young children.
+                  .offset-top-20
+                    ul.post-news-meta.list.list-inline.list-inline-xl
+                      li
+                        span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                        span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+                      li
+                        span.icon.icon-xs.mdi.mdi-account.text-middle.text-madison
+                        span.text-middle.inset-left-10.text-italic.text-primary Ronald Austin
+                      li.pull-lg-right.reveal-block.offset-top-20.offset-lg-top-10
+                          .tags-list.group.group-sm
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) News
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Activities
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Preschool
+            .offset-top-30
+              article.post-news.post-news-wide.view-animate.fadeInUpSmall
+                a(href= cfg.nav.news.submenu.newsPostPage.href)
+                  img.img-responsive(src="images/blog/news-03-770x500.jpg", width="770", height="500", alt="")
+                .post-news-body
+                  h4.text-primary.text-bold
+                    a(href= cfg.nav.news.submenu.newsPostPage.href) Exploring Light and Dark
+                  .offset-top-20
+                    p This time of year, we are seeing the first snowfalls and the weather is suddenly colder.  Despite the temperature, and the brighter mornings, sunset happens before bedtime.  Preschoolers notice these changes and the way that ice or snow makes the world around us so different from day to day. As children bring their observations to school, we bring exploration of light and dark into our curriculum.
+                  .offset-top-20
+                    ul.post-news-meta.list.list-inline.list-inline-xl
+                      li
+                        span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                        span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+                      li
+                        span.icon.icon-xs.mdi.mdi-account.text-middle.text-madison
+                        span.text-middle.inset-left-10.text-italic.text-primary Ronald Austin
+                      li.pull-lg-right.reveal-block.offset-top-20.offset-lg-top-10
+                          .tags-list.group.group-sm
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) News
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Winter
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Curriculum
+            .offset-top-30
+              article.post-news.post-news-wide.view-animate.fadeInUpSmall
+                a(href= cfg.nav.news.submenu.newsPostPage.href)
+                  img.img-responsive(src="images/blog/news-05-770x500.jpg", width="770", height="500", alt="")
+                .post-news-body
+                  h4.text-primary.text-bold
+                    a(href= cfg.nav.news.submenu.newsPostPage.href) 2016/17 Entertainment Books for Your Children
+                  .offset-top-20
+                    p Kids Tree Preschool is excited to be joining in the Entertainment Membership Fundraising initiative again this year. We will be selling both the traditional Entertainment Book Membership that comes with the Gold Card and vouchers and the Entertainment Digital Membership that puts the value of the Entertainment Book into your iPhone or Android smartphone.
+                  .offset-top-20
+                    ul.post-news-meta.list.list-inline.list-inline-xl
+                      li
+                        span.icon.icon-xs.mdi.mdi-calendar-clock.text-middle.text-madison
+                        span.text-middle.inset-left-10.text-italic.text-black 2 days ago
+                      li
+                        span.icon.icon-xs.mdi.mdi-account.text-middle.text-madison
+                        span.text-middle.inset-left-10.text-italic.text-primary Ronald Austin
+                      li.pull-lg-right.reveal-block.offset-top-20.offset-lg-top-10
+                          .tags-list.group.group-sm
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) News
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Books
+                            a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Entertainment
+
+            .offset-top-60.text-md-left
+              +pagination-bootstrap(null, 1, 3)
+          // aside
+          .cell-md-4.text-left.cell-xs-8.offset-top-85.offset-md-top-0
+            aside.inset-md-left-30
+              include ../sections/_section-blog-sidebar-variant-2
+              .offset-top-60
+                h6.text-bold Tags
+                .text-subline
+                .offset-top-20
+                  .tags-list.group.group-sm.reveal-inline-block.text-middle
+                    a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) News
+                    a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Activities
+                    a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Entertainment
+                    a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Spring
+                    a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Winter
+                    a.btn.btn-xs.btn-primary.text-italic(href= cfg.nav.news.submenu.newsPostPage.href) Curriculum
+  .bg-catskill
+    // Page Footer
+    include ../sections/_section-footer-corporate

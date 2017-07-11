@@ -1,0 +1,244 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-progress-bar-bootstrap
+include ../elements/_ui-progress-bar-circle
+include ../elements/_ui-counter-type-1
+
+//- Title
+block title
+  title= cfg.nav.elements.submenu.progressBars.title
+
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.elements,
+    cfg.nav
+    )
+
+  +breadcrumb-classic(
+  cfg.nav.elements.submenu.progressBars.title,
+  {0: {
+    "title": cfg.nav.home.title,
+    "href": cfg.nav.home.href
+  },
+    1: {
+      "title": cfg.nav.elements.title,
+      "href": cfg.nav.elements.href
+    },
+    2: {
+      "title": cfg.nav.elements.submenu.progressBars.title,
+      "href": cfg.nav.elements.submenu.progressBars.href
+    }
+  })
+
+  // Page Content
+  main.page-content.section-70.section-md-114
+    // counters
+    section
+      .shell
+        h2.text-bold Counters
+
+        .range.range-xs-center.range-md-left.offset-top-65.counters
+          .cell-sm-6.cell-md-3
+            +counter-type-1("text-madison mdi mdi-school", "Students",{
+              "dataTo": "97",
+              "dataSpeed": "1300",
+              "preffix": "%"
+            })
+          .cell-sm-6.cell-md-3.offset-top-65.offset-sm-top-0
+            +counter-type-1("text-madison mdi mdi-wallet-travel","Certified Teachers", {
+              "dataTo": "30",
+              "dataSpeed": "1250",
+              "preffix": "+"
+
+            })
+          .cell-sm-6.cell-md-3.offset-top-65.offset-md-top-0
+            +counter-type-1("text-madison mdi mdi-domain","New Groups", {
+              "dataTo": "8",
+              "dataSpeed": "1500"
+
+            })
+          .cell-sm-6.cell-md-3.offset-top-65.offset-md-top-0
+            +counter-type-1("text-madison mdi mdi-account-multiple-outline","Children",{
+              "dataTo": "3510",
+              "dataSpeed": "500"
+            })
+
+    // Classic Skills Bars
+    section.offset-top-70.offset-md-top-114
+      .shell
+        h2.text-bold Classic Skill Bars
+
+        .range.range-xs-center.offset-top-65
+          .cell-xs-10.cell-sm-6
+            .clearfix
+              +progress-bar-linear({
+                "title": "Preschool",
+                "valueTo": "70"
+              })
+            .offset-top-56.clearfix
+              +progress-bar-linear({
+                "title": "Kindergarten",
+                "valueTo": "42"
+              })
+            .offset-top-56.clearfix
+              +progress-bar-linear({
+                "title": "Junior Kindergarten",
+                "valueTo": "38"
+              })
+            .offset-top-56.clearfix
+              +progress-bar-linear({
+                "title": "Summer Camp",
+                "valueTo": "94"
+              })
+
+    // Modern Skills Bars
+    section.offset-top-90.offset-md-top-114
+      .shell
+        h2.text-bold Modern Skill Bars
+
+        .range.range-xs-center.offset-top-50
+          .cell-xs-10.cell-sm-6
+            .clearfix
+              +progress-bar-bootstrap({
+                "title": "Preschool",
+                "apClass": "progress-bar-primary progress-bar-striped",
+                "valueTo": "70",
+                "numberHide": true
+              })
+            .offset-top-56.clearfix
+              +progress-bar-bootstrap({
+                "title": "Kindergarten",
+                "apClass": "progress-bar-primary progress-bar-striped",
+                "valueTo": "87",
+                "numberHide": true
+              })
+            .offset-top-56.clearfix
+              +progress-bar-bootstrap({
+                "title": "Junior Kindergarten",
+                "apClass": "progress-bar-primary progress-bar-striped",
+                "valueTo": "36",
+                "numberHide": true
+              })
+            .offset-top-56.clearfix
+              +progress-bar-bootstrap({
+                "title": "Summer Camp",
+                "apClass": "progress-bar-primary progress-bar-striped",
+                "valueTo": "58",
+                "numberHide": true
+              })
+
+
+    // progress Bars
+    section.offset-top-85.offset-md-top-133
+      .shell
+        h2.text-bold Classic Progress Bar
+
+        .range.range-xs-center.offset-top-60.text-center
+          .cell-sm-6.cell-md-3
+            +progress-bar-circle({
+              "value": "1",
+              "colorFill": "#3eb2cf",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130"
+            })
+              .offset-top-20
+                h6.text-bold Preschool
+          .cell-sm-6.offset-top-50.cell-md-3.offset-sm-top-0
+            +progress-bar-circle({
+              "value": "0.5",
+              "colorFill": "#3eb2cf",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130"
+            })
+              .offset-top-20
+                h6.text-bold Kindergarten
+
+          .cell-sm-6.offset-top-50.cell-md-3.offset-md-top-0
+            +progress-bar-circle({
+              "value": "0.25",
+              "colorFill": "#3eb2cf",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130"
+            })
+              .offset-top-20
+                h6.text-bold Junior Kindergarten
+          .cell-sm-6.offset-top-50.cell-md-3.offset-md-top-0
+            +progress-bar-circle({
+              "value": "0.75",
+              "colorFill": "#3eb2cf",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130"
+            })
+              .offset-top-20
+                h6.text-bold Summer Camp
+
+    // Modern Progress Bar
+    section.offset-top-85.offset-md-top-133
+      .shell
+        h2.text-bold Modern Progress Bar
+
+        .range.range-xs-center.offset-top-60.text-center
+          .cell-sm-6.cell-md-3
+            +progress-bar-circle({
+              "value": "1",
+              "colorFill": "#fec20b",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130",
+              "appClass": "progress-bar-modern",
+              "thickness": "10"
+            })
+              .offset-top-20
+                h6.text-bold Preschool
+          .cell-sm-6.offset-top-50.cell-md-3.offset-sm-top-0
+            +progress-bar-circle({
+              "value": "0.5",
+              "colorFill": "#fec20b",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130",
+              "appClass": "progress-bar-modern",
+              "thickness": "10"
+            })
+              .offset-top-20
+                h6.text-bold Kindergarten
+
+          .cell-sm-6.offset-top-50.cell-md-3.offset-md-top-0
+            +progress-bar-circle({
+              "value": "0.25",
+              "colorFill": "#fec20b",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130",
+              "appClass": "progress-bar-modern",
+              "thickness": "10"
+            })
+              .offset-top-20
+                h6.text-bold Junior Kindergarten
+          .cell-sm-6.offset-top-50.cell-md-3.offset-md-top-0
+            +progress-bar-circle({
+              "value": "0.75",
+              "colorFill": "#fec20b",
+              "colorEmpty": "#e5e5e5",
+              "circleSize": "130",
+              "appClass": "progress-bar-modern",
+              "thickness": "10"
+            })
+              .offset-top-20
+                h6.text-bold Summer Camp
+
+
+  // Page Footer
+  include ../sections/_section-footer-corporate

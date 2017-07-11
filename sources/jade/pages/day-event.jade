@@ -1,0 +1,335 @@
+extends  ../_skeleton
+//includes
+include ../elements/_ui-breadcrumb-classic
+include ../elements/_widget-rd-calendar
+//- Title
+block title
+  title= cfg.nav.pages.submenu.eventsCalendar.submenu.dayEvent.title
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+  +breadcrumb-classic(
+  cfg.nav.pages.submenu.eventsCalendar.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.pages.title,
+      "href": cfg.nav.pages.href
+    },
+    2: {
+      "title": cfg.nav.pages.submenu.eventsCalendar.title,
+      "href": cfg.nav.pages.submenu.eventsCalendar.href
+    },
+    3: {
+      "title": cfg.nav.pages.submenu.eventsCalendar.submenu.dayEvent.title,
+      "href": cfg.nav.pages.submenu.eventsCalendar.submenu.dayEvent.href
+    }
+  })
+  // Page Content
+  main.page-content
+    section.section-70.section-md-114
+      .shell-wide
+        .range.range-xs-center
+          .cell-lg-3.text-sm-left.offset-lg-top-147
+
+            h6.text-bold Calendar
+            .text-subline
+            .offset-top-20
+              +widget-rd-calendar()
+          .cell-lg-9.offset-top-70.offset-lg-top-0
+            .slick-slider.carousel-parent.calendar-carousel( data-child="#child-calendar-carousel", data-arrows="true", data-for="#child-calendar-carousel"
+            data-loop="true", data-dots="false", data-swipe="true",
+            data-items="1",  data-slide-to-scroll="1")
+              .item
+                h2.text-bold June 16, 2016
+              .item
+                h2.text-bold June 17, 2016
+              .item
+                h2.text-bold June 18, 2016
+            // Slick Carousel
+            .offset-top-60
+            .slick-slider#child-calendar-carousel(data-arrows="false", data-loop="true", data-dots="false", data-swipe="false", data-items="1", data-for=".carousel-parent")
+              // June 2016
+              .item
+                .range.range-xs-center.range-xl-left
+                  .cell-sm-6.cell-md-5.cell-xl-4
+                    article.post-event
+                      .post-event-img-overlay
+                        img.img-responsive(src="images/blog/events-01-420x420.jpg", width=420, height=420, alt="")
+                        .post-event-overlay.context-dark
+                          a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                          .offset-top-20
+                            a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                      .unit.unit-lg.unit-lg-horizontal
+                        .unit-left
+                          .post-event-meta.text-center
+                            .h3.text-bold.reveal-inline-block.reveal-lg-block 16
+                            p.reveal-inline-block.reveal-lg-block June
+                            span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                        .unit-body
+                          .post-event-body.text-lg-left
+                            h6
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Summer Art & Craft Workshop
+                            ul.list-inline.list-inline-xs
+                              li
+                                a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                  span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                  span.inset-left-10.text-dark.text-middle Walter Stanley
+                  .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50.offset-sm-top-0
+                    article.post-event
+                      .post-event-img-overlay
+                        img.img-responsive(src="images/blog/events-02-420x420.jpg", width=420, height=420, alt="")
+                        .post-event-overlay.context-dark
+                          a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                          .offset-top-20
+                            a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                      .unit.unit-lg.unit-lg-horizontal
+                        .unit-left
+                          .post-event-meta.text-center
+                            .h3.text-bold.reveal-inline-block.reveal-lg-block 16
+                            p.reveal-inline-block.reveal-lg-block June
+                            span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                        .unit-body
+                          .post-event-body.text-lg-left
+                            h6
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Family Celebration
+                            ul.list-inline.list-inline-xs
+                              li
+                                a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                  span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                  span.inset-left-10.text-dark.text-middle Raymond Salazar
+                  .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50.offset-xl-top-0
+                    article.post-event
+                      .post-event-img-overlay
+                        img.img-responsive(src="images/blog/events-03-420x420.jpg", width=420, height=420, alt="")
+                        .post-event-overlay.context-dark
+                          a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                          .offset-top-20
+                            a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                      .unit.unit-lg.unit-lg-horizontal
+                        .unit-left
+                          .post-event-meta.text-center
+                            .h3.text-bold.reveal-inline-block.reveal-lg-block 16
+                            p.reveal-inline-block.reveal-lg-block June
+                            span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                        .unit-body
+                          .post-event-body.text-lg-left
+                            h6
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Preschool Drawing  Contest
+                            ul.list-inline.list-inline-xs
+                              li
+                                a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                  span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                  span.inset-left-10.text-dark.text-middle Bruce Hawkins
+                  .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50
+                    article.post-event
+                      .post-event-img-overlay
+                        img.img-responsive(src="images/blog/event-08-420x420.jpg", width=420, height=420, alt="")
+                        .post-event-overlay.context-dark
+                          a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                          .offset-top-20
+                            a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                      .unit.unit-lg.unit-lg-horizontal
+                        .unit-left
+                          .post-event-meta.text-center
+                            .h3.text-bold.reveal-inline-block.reveal-lg-block 16
+                            p.reveal-inline-block.reveal-lg-block June
+                            span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                        .unit-body
+                          .post-event-body.text-lg-left
+                            h6
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Family Celebration 2016: Drawing & Writing Contest at Kids Tree Preschool
+                            ul.list-inline.list-inline-xs
+                              li
+                                a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                  span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                  span.inset-left-10.text-dark.text-middle Walter Stanley
+              // July 2016
+              .item
+                .shell-wide
+                  .range.range-xs-center.range-xl-left
+                    .cell-sm-6.cell-md-5.cell-xl-4
+                      article.post-event
+                        .post-event-img-overlay
+                          img.img-responsive(src="images/blog/events-01-420x420.jpg", width=420, height=420, alt="")
+                          .post-event-overlay.context-dark
+                            a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                            .offset-top-20
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                        .unit.unit-lg.unit-lg-horizontal
+                          .unit-left
+                            .post-event-meta.text-center
+                              .h3.text-bold.reveal-inline-block.reveal-lg-block 16
+                              p.reveal-inline-block.reveal-lg-block July
+                              span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                          .unit-body
+                            .post-event-body.text-lg-left
+                              h6
+                                a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Summer Art & Craft Workshop
+                              ul.list-inline.list-inline-xs
+                                li
+                                  a(href=cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                    span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                    span.inset-left-10.text-dark.text-middle Walter Stanley
+                    .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50.offset-sm-top-0
+                      article.post-event
+                        .post-event-img-overlay
+                          img.img-responsive(src="images/blog/events-02-420x420.jpg", width=420, height=420, alt="")
+                          .post-event-overlay.context-dark
+                            a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                            .offset-top-20
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                        .unit.unit-lg.unit-lg-horizontal
+                          .unit-left
+                            .post-event-meta.text-center
+                              .h3.text-bold.reveal-inline-block.reveal-lg-block 18
+                              p.reveal-inline-block.reveal-lg-block July
+                              span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                          .unit-body
+                            .post-event-body.text-lg-left
+                              h6
+                                a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) First Day of Classes, Fall Semester
+                              ul.list-inline.list-inline-xs
+                                li
+                                  a(href=cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                    span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                    span.inset-left-10.text-dark.text-middle Raymond Salazar
+                    .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50.offset-xl-top-0
+                      article.post-event
+                        .post-event-img-overlay
+                          img.img-responsive(src="images/blog/events-05-420x420.jpg", width=420, height=420, alt="")
+                          .post-event-overlay.context-dark
+                            a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                            .offset-top-20
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                        .unit.unit-lg.unit-lg-horizontal
+                          .unit-left
+                            .post-event-meta.text-center
+                              .h3.text-bold.reveal-inline-block.reveal-lg-block 25
+                              p.reveal-inline-block.reveal-lg-block July
+                              span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                          .unit-body
+                            .post-event-body.text-lg-left
+                              h6
+                                a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) New Activities for Infants
+                              ul.list-inline.list-inline-xs
+                                li
+                                  a(href=cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                    span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                    span.inset-left-10.text-dark.text-middle Danielle Garza
+              // September 2016
+              .item
+                .shell-wide
+                  .range.range-xs-center.range-xl-left
+                    .cell-sm-6.cell-md-5.cell-xl-4
+                      article.post-event
+                        .post-event-img-overlay
+                          img.img-responsive(src="images/blog/events-01-420x420.jpg", width=420, height=420, alt="")
+                          .post-event-overlay.context-dark
+                            a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                            .offset-top-20
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                        .unit.unit-lg.unit-lg-horizontal
+                          .unit-left
+                            .post-event-meta.text-center
+                              .h3.text-bold.reveal-inline-block.reveal-lg-block 16
+                              p.reveal-inline-block.reveal-lg-block June
+                              span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                          .unit-body
+                            .post-event-body.text-lg-left
+                              h6
+                                a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Summer Art & Craft Workshop
+                              ul.list-inline.list-inline-xs
+                                li
+                                  a(href=cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                    span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                    span.inset-left-10.text-dark.text-middle Walter Stanley
+                    .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50.offset-sm-top-0
+                      article.post-event
+                        .post-event-img-overlay
+                          img.img-responsive(src="images/blog/events-02-420x420.jpg", width=420, height=420, alt="")
+                          .post-event-overlay.context-dark
+                            a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                            .offset-top-20
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                        .unit.unit-lg.unit-lg-horizontal
+                          .unit-left
+                            .post-event-meta.text-center
+                              .h3.text-bold.reveal-inline-block.reveal-lg-block 18
+                              p.reveal-inline-block.reveal-lg-block July
+                              span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                          .unit-body
+                            .post-event-body.text-lg-left
+                              h6
+                                a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) First Day of Classes, Fall Semester
+                              ul.list-inline.list-inline-xs
+                                li
+                                  a(href=cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                    span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                    span.inset-left-10.text-dark.text-middle Raymond Salazar
+                    .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50.offset-xl-top-0
+                      article.post-event
+                        .post-event-img-overlay
+                          img.img-responsive(src="images/blog/events-03-420x420.jpg", width=420, height=420, alt="")
+                          .post-event-overlay.context-dark
+                            a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                            .offset-top-20
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                        .unit.unit-lg.unit-lg-horizontal
+                          .unit-left
+                            .post-event-meta.text-center
+                              .h3.text-bold.reveal-inline-block.reveal-lg-block 22
+                              p.reveal-inline-block.reveal-lg-block June
+                              span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                          .unit-body
+                            .post-event-body.text-lg-left
+                              h6
+                                a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Volleyball at Williams Invitational
+                              ul.list-inline.list-inline-xs
+                                li
+                                  a(href=cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                    span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                    span.inset-left-10.text-dark.text-middle Bruce Hawkins
+                    .cell-sm-6.cell-md-5.cell-xl-4.offset-top-50
+                      article.post-event
+                        .post-event-img-overlay
+                          img.img-responsive(src="images/blog/events-05-420x420.jpg", width=420, height=420, alt="")
+                          .post-event-overlay.context-dark
+                            a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                            .offset-top-20
+                              a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+                        .unit.unit-lg.unit-lg-horizontal
+                          .unit-left
+                            .post-event-meta.text-center
+                              .h3.text-bold.reveal-inline-block.reveal-lg-block 25
+                              p.reveal-inline-block.reveal-lg-block July
+                              span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                          .unit-body
+                            .post-event-body.text-lg-left
+                              h6
+                                a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) New Activities for Infants
+                              ul.list-inline.list-inline-xs
+                                li
+                                  a(href=cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                                    span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                                    span.inset-left-10.text-dark.text-middle Danielle Garza
+
+  // Corporate footer
+  include ../sections/_section-footer-corporate

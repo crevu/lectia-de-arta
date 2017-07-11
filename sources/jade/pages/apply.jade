@@ -1,0 +1,107 @@
+extends  ../_skeleton
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+//- Title
+block title
+  title= cfg.nav.pages.submenu.pages.submenu.apply.title
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+  +breadcrumb-classic(
+  cfg.nav.pages.submenu.pages.submenu.apply.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.pages.title,
+      "href": cfg.nav.pages.href
+    },
+    2: {
+      "title": cfg.nav.pages.submenu.about.title,
+      "href": cfg.nav.pages.submenu.about.href
+    },
+    3: {
+      "title": cfg.nav.pages.submenu.pages.submenu.apply.title,
+      "href": cfg.nav.pages.submenu.pages.submenu.apply.href
+    }
+  })
+  // Page Content
+  main.page-content
+    //A Meeting of Minds
+    section.section-70.section-md-114
+      .shell
+        .range
+          .cell-sm-4.cell-sm-push-2.text-sm-left
+            img.img-responsive.reveal-inline-block(src="images/apply-01-370x370.jpg" width=370 height=370 alt="")
+          .cell-sm-8.cell-sm-push-1.offset-top-50.offset-sm-top-0.text-sm-left
+            .inset-sm-right-30
+              h2.text-bold How to Apply
+              .hr-sm-left-0
+              .offset-top-30.offset-sm-top-60
+                p You are invited to apply for any open positions listed for which you believe you are qualified. Internal candidates (applicants who are currently employed by the Kids Tree Preschool) will be given first consideration for all positions. Employees of the Kids Tree Preschool (KTP employees) are considered external candidates.
+              p If the Kids Tree Preschool is not your current employer, we invite you to view our available positions in the Job Opportunities section and follow the instructions provided to create your profile and to submit an online application.
+              p Please be prepared to enter your e-mail address and password. You will be able to use that same information to access your profile and online application in the future.
+              p Applicants must submit a job application online. However, if you have difficulty submitting your resume online: for nursing positions please contact the Nurse Recruitment office at (800) 702-1734. All other applicants, please contact (800) 702-2355.
+
+    // Fill in the Form
+    section.bg-madison
+      .shell
+        .range.range-xs-center.range-sm-right.offset-top-0
+          .cell-xs-10.cell-sm-8.cell-md-6.section-image-aside.section-image-aside-left.text-sm-left
+            .section-image-aside-img.veil.reveal-sm-block.section-image-aside-2-img(style='background-image: url(images/apply-02-948x987.jpg)')
+            .section-image-aside-body.section-70.section-md-114.inset-sm-left-70.inset-lg-left-100
+              h2.text-bold.text-white Fill in the Form
+              hr.divider.hr-sm-left-0.bg-white
+              .offset-top-60
+                form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+                  .offset-top-17
+                    .form-group
+                      label.form-label.form-label-outside.text-white(for="fill-form-name") First name
+                      input#fill-form-name.form-control(type="text" name="name" data-constraints="@Required")
+                  .offset-top-17
+                    .form-group
+                      label.form-label.form-label-outside.text-white(for="fill-form-last-name") Last name
+                      input#fill-form-last-name.form-control(type="text" name="last-name" data-constraints="@Required")
+                  .offset-top-17
+                    .form-group
+                      label.form-label.form-label-outside.text-white(for="fill-form-phone") Phone
+                      input#fill-form-phone.form-control(type="text" name="phone" data-constraints="@Required @IsNumeric")
+                  .offset-top-17
+                    .form-group
+                      label.form-label.form-label-outside.text-white(for="fill-form-email") E-mail
+                      input#fill-form-email.form-control(type="email" name="email" data-constraints="@Required @Email")
+                  .offset-top-17
+                    .form-group
+                      label.form-label.form-label-outside(for="fill-form-department" style="color: #fff") Department
+                      select.form-control.select-filter#fill-form-department(data-placeholder="Pre-Kindergarten", data-minimum-results-for-search="Infinity")
+                        option Pre-Kindergarten
+                        option(value="2") Preschool
+                        option(value="3") Summer Camp
+                  .offset-top-35
+                    .form-group
+                      // RD Filepicker
+                      .rd-file-picker#fill-form-file
+                        input(name="file", type="file", multiple)
+                        .rd-file-picker-meta
+                        .rd-file-picker-btn.btn.text-left.btn-ellipse
+                          span Select a File
+                  .text-center.text-lg-left.offset-top-30.context-dark
+                    button(type="submit").btn.btn-ellipse.btn-primary Apply Now
+  // Page Footer
+  include ../sections/_section-footer-corporate

@@ -1,0 +1,93 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+
+//- Title
+block title
+  title= cfg.nav.pages.submenu.about.submenu.history.title
+
+//- Page
+block page
+
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+
+  +breadcrumb-classic(
+  cfg.nav.pages.submenu.about.submenu.history.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.pages.title,
+      "href": cfg.nav.pages.href
+    },
+    2: {
+      "title": cfg.nav.pages.submenu.about.title,
+      "href": cfg.nav.pages.submenu.about.href
+    },
+    3: {
+      "title": cfg.nav.pages.submenu.about.submenu.history.title,
+      "href": cfg.nav.pages.submenu.about.submenu.history.href
+    }
+  })
+
+  // Page Content
+  main.page-content
+    //A Meeting of Minds
+    section.section-70.section-md-114
+      .shell
+        .range
+          .cell-sm-4.cell-sm-push-2.text-sm-left
+            .inset-sm-left-30
+              img.img-responsive.reveal-inline-block.img-rounded(src="images/users/user-christopher-smith-340x300.jpg" width=340 height=340 alt="")
+              .offset-top-20
+                h6.text-primary.text-bold Christopher Smith
+              p Director of the Kids Tree Preschool, served from 1972 to 1977.
+          .cell-sm-8.cell-sm-push-1.offset-top-50.offset-sm-top-0.text-sm-left
+            h2.text-bold Short History
+            .hr-sm-left-0
+            .offset-top-30.offset-sm-top-60
+              p Four members of the Presbyterian Church of the local area opened the Kids Tree Preschool on January 29, 1962, with 14 children. These 4 parents wanted to create a safe, nurturing place for their young preschool age children to play. Little did they know that the little preschool would grow to educate thousands of children and become a pillar in the community and beyond! It became possible thanks to Christopher Smith, a teacher here at the time, which was hired as director in February 1972, after Bella Coughlin and Ann Johnson. Over Christopher's appointment as the director, the school grew in leaps and bounds expanding to 180-230 children enrolled per year that became a great achievement for Kids Tree.
+            p As enrollment increased, more classrooms were added including one classroom in the lower building for a total of 5 classrooms. In 1980, afternoon classes were added so the schedule was 8:30 - 11:30 am and 12:00 - 3:00 pm, with an extended day on either end of the day. With very few nursery schools in the area, the classes were full with a long waiting list.
+            p The teachers at the Kids Tree Preschool have always been a consistent source of education, expertise, love and encouragement. Several teachers have been teaching here for 26-32 years and have formed lifelong friendships. This tradition was established by our third director, Christopher Smith. Today, all teachers in our team are highly educated in early childhood education and continue to gain information in this field. We are a close-knit family committed and dedicated to providing the best possible preschool program! It is our life's work!
+    // Images
+    section
+      .shell-wide
+        .range
+          .cell-sm-4
+            img.img-responsive.reveal-inline-block(src="images/history-01-570x370.jpg" width=570 height=370 alt="")
+          .cell-sm-4
+            img.img-responsive.reveal-inline-block(src="images/history-02-570x370.jpg" width=570 height=370 alt="")
+          .cell-sm-4
+            img.img-responsive.reveal-inline-block(src="images/history-03-570x370.jpg" width=570 height=370 alt="")
+
+    //A Meeting of Minds
+    section.section-70.section-md-114
+      .shell
+        .range.range-xs-center.range-sm-left
+          .cell-sm-8.text-sm-left
+            h2.text-bold Our Approach
+            .hr-sm-left-0
+            .offset-top-30.offset-sm-top-60
+              p Our approach to learning makes all the difference, and the research shows it!
+            p Little minds are wide open and ready to learn, and we have a unique way of encouraging children to become life-long learners. A recent study of 5000 Kids Tree children using the nationally-recognized BRIGANCE Early Childhood Screens III found that our students are exceeding expectations on their assessments. all this became possible thanks to teachers and families cooperation.
+            p Teachers are at the heart of any program at Kids Tree and are selected for their educational background and experience in early childhood education. Teachers must have the ability to create a safe, nurturing atmosphere in the classroom. All teachers and staff meet the State requirements for working with children in a preschool/child care environment. Continuing professional development is standard so teachers are up-to-date on child development and are part of creating a high-quality learning environment for young children.
+            p Families are critical partners in children's learning. The home-school connection includes progress meetings with teachers and online access to information about current lessons, interactive books and videos, classroom activities, and relevant resources about child development. Families are encouraged to take an active part in their child's education.
+  // Page Footer
+  include ../sections/_section-footer-corporate

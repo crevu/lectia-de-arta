@@ -1,0 +1,178 @@
+extends  ../_skeleton
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+include ../elements/_ui-tabs-classic
+//- Title
+block title
+  title= cfg.nav.pages.submenu.programs.title
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+  +breadcrumb-classic(
+  cfg.nav.pages.submenu.programs.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.pages.title,
+      "href": cfg.nav.pages.href
+    },
+    2: {
+      "title": cfg.nav.pages.submenu.programs.title,
+      "href": cfg.nav.pages.submenu.programs.href
+    }
+  })
+  // Page Content
+  main.page-content
+    // vertical link Tabs
+    section.section-90.section-md-114.section-md-bottom-190
+      .shell
+        +tabs-classic(["Infant & Baby Care", "Early Preschool", "Preschool", "Pre-Kindergarten", "Summer Camp", "Junior Kindergarten", "Interactive Kindergarten"], "vertical", "tabs-lg-collapsed", "")
+          div.view-animate.zoomInSmall
+            .inset-lg-left-60
+              h2.text-bold.veil.reveal-lg-block Infant & Baby Care
+              .offset-lg-top-60
+                p Our Great Places for Babies program provides a warm, welcoming environment where your baby can grow from a bundle of joy to a bundle of curiosity.
+                p Your baby's primary caregiver is a nurturing child development professional who is focused on creating experiences and opportunities that invite exploration and support the rapid and important development that is occurring in a child's first year.
+                p More than just daycare, at Kids Tree we are focused on keeping your baby happy, engaged, and secure.
+              .offset-top-30
+                img.img-responsive.reveal-inline-block(src="images/academics-01-770x480.jpg" width=770 height=480 alt="")
+              .offset-top-30
+                h6.text-bold Areas of Development
+                .text-subline
+                .range.offset-top-20
+                  .cell-sm-6.cell-md-4
+                    ul.list.list-unstyled.list-marked
+                      li Language and Literacy Development
+                      li Executive Function
+                      li Social and Emotional Development
+                      li Physical Development and Wellness
+                      li Cognitive Development
+                      li Creative Expression
+
+          div.view-animate.zoomInSmall
+            .inset-lg-left-60
+              h2.text-bold.veil.reveal-lg-block Early Preschool
+              .offset-lg-top-60
+                p Most 2-year-olds are filled with energy and an innate curiosity about the world around them. They're also quickly developing their sense of independence. To help them achieve that independence, we're proud to offer your child Learn from the Start, our milestone-focused approach to early education, focused on certain skills development.
+              .offset-top-30
+                img.img-responsive.reveal-inline-block(src="images/academics-02-770x480.jpg" width=770 height=480 alt="")
+              .offset-top-30
+                h6.text-bold Skills and Tools
+                .text-subline
+                .offset-top-20
+                  ul.list.list-unstyled.list-marked
+                    li Focus and self-regulation
+                    li Perspective taking
+                    li Communicating
+                    li Making connections
+                    li Critical thinking
+                    li Taking on challenges
+                    li Self-directed, engaged learning
+          div.view-animate.zoomInSmall
+            .inset-lg-left-60
+              h2.text-bold.veil.reveal-lg-block Preschool
+              .offset-lg-top-60
+                p Preschoolers love to explore through hands-on activities. And we're pleased to offer that, with kindergarten-readiness activities based on the best national early-childhood standards. As your child progresses on the School Readiness Pathway to kindergarten and further education, preschool is an essential element of that journey.
+              .offset-top-30
+                img.img-responsive.reveal-inline-block(src="images/academics-03-770x480.jpg" width=770 height=480 alt="")
+              .offset-top-30
+                h6.text-bold Activities Focus
+                .text-subline
+                .range.offset-top-20
+                  .cell-sm-6.cell-md-4
+                    ul.list.list-unstyled.list-marked
+                      li Pre-reading
+                      li Pre-writing
+                      li Small muscle activities
+                      li Pre-math
+                      li Physical coordination
+                      li Social skills
+                      li Taking on challenges
+                      li Developing learning goals
+
+          div.view-animate.zoomInSmall
+            .inset-lg-left-60
+              h2.text-bold.veil.reveal-lg-block Pre-Kindergarten
+              .offset-lg-top-60
+                p Our Pre-Kindergarten classroom is designed to help your child make significant developmental gains, communicate more successfully, and work well both independently and in group situations. Building on Preschool learning, Pre-K learning focuses on problem-solving, responsive listening and language usage, as well as social and collaborative skills, with specific lessons in Reading, Writing, Math etc.
+              .offset-top-30
+                img.img-responsive.reveal-inline-block(src="images/academics-04-770x480.jpg" width=770 height=480 alt="")
+              .offset-top-30
+                h6.text-bold Essential Life Skills
+                .text-subline
+                .offset-top-20
+                  p We also focus on essential life skills such as communication and self-regulation. Plus, children are routinely encouraged to take on challenges, develop their own learning goals, see situations from different perspectives etc.
+              .offset-top-30
+                h6.text-bold Literacy Focus
+                .text-subline
+                .offset-top-20
+                  p In Pre-K, your child is immersed in our Focus on Literacy program, which builds on and strengthens skills gained in Preschool. In-school and at-home activities are designed to improve your child's literacy and cognition in vocabulary development, phonological awareness, alphabet knowledge, and in other spheres of literacy.
+              .offset-top-30
+                h6.text-bold Kindergarten Preparation
+                .text-subline
+                .offset-top-20
+                  p Is your child curious about what kindergarten's really like? They can find it out here. Our K-Prep enhancement, offering the Ready for School curriculum, introduces your child to kindergarten concepts and experiences, with small group instruction, extended seatwork, and kindergarten-level instruction.
+          div.view-animate.zoomInSmall
+            .inset-lg-left-60
+              h2.text-bold.veil.reveal-lg-block Summer Camp
+              .offset-lg-top-60
+                img.img-responsive.reveal-inline-block(src="images/academics-05-770x480.jpg" width=770 height=480 alt="")
+              .offset-top-30
+                p Day camp programs at Kids Tree offer indoor and outdoor activities, plus opportunities for fun, friendships, and exploration. Our programs group children by age and encourage their growing ability to make choices, work with others, and assume responsibilities. Our camp teachers work collaboratively to develop a fun curriculum that takes advantage of all that the summer offers.
+              .offset-top-30
+                a(href="#").btn.btn-ellipse.btn-primary Choose a Program
+          div.view-animate.zoomInSmall
+            .inset-lg-left-60
+              h2.text-bold.veil.reveal-lg-block Junior Kindergarten
+              .offset-lg-top-60
+                p If you feel your child isn't quite old enough to start kindergarten or might need additional skill development before getting into a school setting, Junior Kindergarten is the path for them. Nationally recognized curriculums adapted for Junior Kindergarten ensure that the pace of study is set for the specific needs and abilities of students aged 5 and older.
+              .offset-top-30
+                img.img-responsive.reveal-inline-block(src="images/academics-06-770x480.jpg" width=770 height=480 alt="")
+              .offset-top-30
+                h6.text-bold Skills Development
+                .text-subline
+                .offset-top-20
+                  p Junior Kindergarten program concentrates on skills including organizing work, controlling impulses, and others.
+              .offset-top-30
+                h6.text-bold Learning Progress
+                .text-subline
+                .offset-top-20
+                  p Throughout the year, learning progress reports keep you well-informed every step of the way during your child's ongoing journey of school readiness.
+
+          div.view-animate.zoomInSmall
+            .inset-lg-left-60
+              h2.text-bold.veil.reveal-lg-block Interactive Kindergarten
+              .offset-lg-top-60
+                p We know that computers are often the hub of today's home; that's why we offer a unique, cutting-edge Interactive Kindergarten program featuring smart boards, tablet computers and other intuitive touchscreen technologies so children can learn the basics faster than ever to ensure school readiness.
+              .offset-top-30
+                img.img-responsive.reveal-inline-block(src="images/academics-07-770x480.jpg" width=770 height=480 alt="")
+              .offset-top-30
+                h6.text-bold What This Program Develops
+                .text-subline
+                .offset-top-20
+                  ul.list.list-unstyled.list-marked
+                    li Language and Literacy Development
+                    li Executive Function
+                    li Social and Emotional Development
+                    li Physical Development and Wellness
+                    li Cognitive Development
+                    li Creative Expressions
+  // Page Footer
+  include ../sections/_section-footer-corporate

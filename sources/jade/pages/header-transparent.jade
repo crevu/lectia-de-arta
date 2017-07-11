@@ -1,0 +1,189 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-parallax
+include ../elements/_widget-flickrfeed
+include ../elements/_ui-rd-navbar-transparent
+
+//- Title
+block title
+  title= cfg.nav.pages.submenu.layouts.submenu.headerTransparent.title
+
+//- Page
+block page
+  // Page Header
+  header.page-head(style="position:absolute; left:0; right:0;top:0")
+    //- RD Navbar
+    +rd-navbar-transparent(
+    'rd-navbar-transparent',
+    {
+      "data-lg-auto-height": "true",
+      "data-auto-height": "false",
+      "data-md-layout": 'rd-navbar-fixed',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-device-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true',
+      "data-md-focus-on-hover": 'false'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+
+  // Page Content
+  main.page-content
+    //- Welcome
+    section
+      // Swiper
+      .swiper-container.swiper-slider(data-height="100vh" data-loop="false" data-dragable="false" data-min-height="480px" data-slide-effect="true")
+        .swiper-wrapper
+          .swiper-slide(data-slide-bg='images/slide-01-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-right.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) Play, Explore and Learn.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default Programs of Kids Tree Preschool include world-class curriculum and knowledgeable child development professionals that meet the needs of children at every age and stage.
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-madison.btn-ellipse Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-primary-transparent.btn-ellipse.veil.reveal-lg-inline-block Learn More
+          .swiper-slide(data-slide-bg='images/slide-02-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-left.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) A Perfect Learning Center for Your Kids.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default Any successful career starts with good education. At our learning center, your children will have deeper knowledge of all necessary subjects that will be especially useful for them.
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-ellipse.btn-madison Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-ellipse.btn-primary-transparent.veil.reveal-lg-inline-block Learn More
+          .swiper-slide(data-slide-bg='images/slide-03-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-right.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) We Offer Different Kinds of Activities.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default With us, your kid will enjoy plenty of different activities that will develop them and act as a perfect ground for further development. Explore the bright future of your child at Kids Tree Preschool!
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-ellipse.btn-madison Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-ellipse.btn-primary-transparent.veil.reveal-lg-inline-block Learn More
+        // Swiper Pagination
+        .swiper-pagination
+
+
+    // Events
+    section
+      .shell-wide.section-70.section-md-114
+        h2 Events
+
+        .range.offset-top-60.range-xs-center
+          .cell-sm-6.cell-md-5.cell-xl-3
+            article.post-event.view-animate.fadeInLeftSm.delay-04
+              .post-event-img-overlay
+                img.img-responsive(src="images/blog/events-05-420x420.jpg", width=420, height=420, alt="")
+                .post-event-overlay.context-dark
+                  a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                  .offset-top-20
+                    a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+              .unit.unit-lg.unit-lg-horizontal
+                .unit-left
+                  .post-event-meta.text-center
+                    .h3.text-bold.reveal-inline-block.reveal-lg-block 31
+                    p.reveal-inline-block.reveal-lg-block September
+                    span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                .unit-body
+                  .post-event-body.text-lg-left
+                    h6
+                      a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Preschool Dinner
+                    ul.list-inline.list-inline-xs
+                      li
+                        a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                          span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                          span.inset-left-10.text-dark.text-middle Walter Stanley
+          .cell-sm-6.cell-md-5.cell-xl-3.offset-top-50.offset-sm-top-0
+            article.post-event.view-animate.fadeInLeftSm.delay-06
+              .post-event-img-overlay
+                img.img-responsive(src="images/blog/events-06-420x420.jpg", width=420, height=420, alt="")
+                .post-event-overlay.context-dark
+                  a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                  .offset-top-20
+                    a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+              .unit.unit-lg.unit-lg-horizontal
+                .unit-left
+                  .post-event-meta.text-center
+                    .h3.text-bold.reveal-inline-block.reveal-lg-block 5
+                    p.reveal-inline-block.reveal-lg-block July
+                    span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                .unit-body
+                  .post-event-body.text-lg-left
+                    h6
+                      a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Grandparents Day
+                    ul.list-inline.list-inline-xs
+                      li
+                        a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                          span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                          span.inset-left-10.text-dark.text-middle Raymond Salazar
+          .cell-sm-6.cell-md-5.cell-xl-3.offset-top-50.offset-xl-top-0
+            article.post-event.view-animate.fadeInLeftSm.delay-08
+              .post-event-img-overlay
+                img.img-responsive(src="images/blog/events-02-420x420.jpg", width=420, height=420, alt="")
+                .post-event-overlay.context-dark
+                  a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                  .offset-top-20
+                    a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+              .unit.unit-lg.unit-lg-horizontal
+                .unit-left
+                  .post-event-meta.text-center
+                    .h3.text-bold.reveal-inline-block.reveal-lg-block 15
+                    p.reveal-inline-block.reveal-lg-block June
+                    span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                .unit-body
+                  .post-event-body.text-lg-left
+                    h6
+                      a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Family Celebration
+                    ul.list-inline.list-inline-xs
+                      li
+                        a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                          span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                          span.inset-left-10.text-dark.text-middle Bruce Hawkins
+          .cell-sm-6.cell-md-5.cell-xl-3.offset-top-50.offset-xl-top-0
+            article.post-event.view-animate.fadeInLeftSm.delay-1
+              .post-event-img-overlay
+                img.img-responsive(src="images/blog/events-09-420x420.jpg", width=420, height=420, alt="")
+                .post-event-overlay.context-dark
+                  a(href= cfg.nav.pages.submenu.pages.submenu.apply.href).btn.btn-ellipse.btn-primary Book Now
+                  .offset-top-20
+                    a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href).btn.btn-ellipse.btn-default Learn More
+              .unit.unit-lg.unit-lg-horizontal
+                .unit-left
+                  .post-event-meta.text-center
+                    .h3.text-bold.reveal-inline-block.reveal-lg-block 5
+                    p.reveal-inline-block.reveal-lg-block June
+                    span.text-bold.reveal-inline-block.reveal-lg-block.inset-left-10.inset-lg-left-0 5:00pm
+                .unit-body
+                  .post-event-body.text-lg-left
+                    h6
+                      a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.eventPage.href) Summer Drawing Contest
+                    ul.list-inline.list-inline-xs
+                      li
+                        a(href= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href)
+                          span.icon.icon-xxs.mdi.mdi-account-outline.text-middle
+                          span.inset-left-10.text-dark.text-middle Danielle Garza
+        .offset-top-50.offset-lg-top-56
+          a(href= cfg.nav.pages.submenu.eventsCalendar.submenu.calendar.href).btn.btn-ellipse.btn-icon.btn-icon-right.btn-primary
+            span.icon.fa-arrow-right
+            span View Event Calendar
+
+  include ../sections/_section-footer-corporate

@@ -1,0 +1,78 @@
+extends  ../_skeleton
+//- Includes
+include ../elements/_ui-rd-parallax
+include ../elements/_widget-flickrfeed
+//- Title
+block title
+  title= cfg.nav.pages.submenu.layouts.submenu.footerMinimal.title
+//- Page
+block page
+  // Page Header
+  header.page-head.header-panel-absolute
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-auto-height": "false",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+  // Page Content
+  main.page-content
+    //- Welcome
+    section
+      // Swiper
+      .swiper-container.swiper-slider(data-height="100vh" data-loop="false" data-dragable="false" data-min-height="480px" data-slide-effect="true")
+        .swiper-wrapper
+          .swiper-slide(data-slide-bg='images/slide-01-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-right.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) Play, Explore and Learn.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default Programs of Kids Tree Preschool include world-class curriculum and knowledgeable child development professionals that meet the needs of children at every age and stage.
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-madison.btn-ellipse Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-primary-transparent.btn-ellipse.veil.reveal-lg-inline-block Learn More
+          .swiper-slide(data-slide-bg='images/slide-02-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-left.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) A Perfect Learning Center for Your Kids.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default Any successful career starts with good education. At our learning center, your children will have deeper knowledge of all necessary subjects that will be especially useful for them.
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-ellipse.btn-madison Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-ellipse.btn-primary-transparent.veil.reveal-lg-inline-block Learn More
+          .swiper-slide(data-slide-bg='images/slide-03-1920x810.jpg' style="background-position: 80% center")
+            .swiper-slide-caption.header-transparent-slide-caption
+              .container
+                .range.range-xs-center.range-lg-right.range-condensed
+                  .cell-md-6.text-md-left.cell-xs-10
+                    div(data-caption-animate="fadeInUp" data-caption-delay="100" data-caption-duration="1700")
+                      h1.text-bold
+                        a(href= cfg.nav.pages.submenu.programs.href) We Offer Different Kinds of Activities.
+                    .offset-top-20.offset-xs-top-40.offset-xl-top-60(data-caption-animate="fadeInUp" data-caption-delay="150" data-caption-duration="1700")
+                      h5.text-regular.font-default With us, your kid will enjoy plenty of different activities that will develop them and act as a perfect ground for further development. Explore the bright future of your child at Kids Tree Preschool!
+                    .offset-top-20.offset-xl-top-40(data-caption-animate="fadeInUp" data-caption-delay="400" data-caption-duration="1700")
+                      a(href= cfg.nav.pages.submenu.pages.submenu.loginRegister.href).btn.btn-ellipse.btn-madison Sign Up for Excursion
+                      .inset-xs-left-30.reveal-lg-inline-block
+                        a(href= cfg.nav.pages.submenu.programs.href).btn.btn-ellipse.btn-primary-transparent.veil.reveal-lg-inline-block Learn More
+        // Swiper Pagination
+        .swiper-pagination
+
+  include ../sections/_section-footer-minimal

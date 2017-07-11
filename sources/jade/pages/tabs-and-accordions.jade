@@ -1,0 +1,160 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+include ../elements/_widget-form-subscribe
+include ../elements/_ui-tabs-boxed
+include ../elements/_ui-tabs-classic
+include ../elements/_ui_accordion-classic
+
+//- Title
+block title
+  title= cfg.nav.elements.submenu.tabsAndAccordions.title
+
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.elements,
+    cfg.nav
+    )
+
+  +breadcrumb-classic(
+  cfg.nav.elements.submenu.tabsAndAccordions.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.elements.title,
+      "href": cfg.nav.elements.href
+    },
+    2: {
+      "title": cfg.nav.elements.submenu.tabsAndAccordions.title,
+      "href": cfg.nav.elements.submenu.tabsAndAccordions.href
+    }
+  })
+
+  // Page Content
+  main.page-content.section-70.section-md-114
+    // horizontal link Tabs
+    section
+      .shell
+        .range.range-xs-center
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Classic Tabs
+
+            .offset-top-50
+              +tabs-classic(["Preschool Education", "Pre-Kindergarten", "Interactive Kindergarten"], "horizontal")
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+    // vertical link Tabs
+    section.offset-top-70.offset-md-top-114
+      .shell
+        .range.range-xs-center
+          .cell-xs-10.cell-lg-12
+            h2.text-bold Classic Vertical Tabs
+
+            .offset-top-60
+              +tabs-classic(["Preschool Education", "Pre-Kindergarten", "Interactive Kindergarten"], "vertical")
+                div
+                  .inset-lg-left-30
+                    p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+                div
+                  .inset-lg-left-30
+                     p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+                div
+                  .inset-lg-left-30
+                    p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+    // Horizontal button Tabs
+    section.offset-top-70.offset-md-top-114
+      .shell
+        .range.range-xs-center
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Button Tabs
+
+            .offset-top-60
+              +tabs-boxed(["Preschool Education", "Pre-Kindergarten", "Interactive Kindergarten"], "horizontal")
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+    // Vertical button Tabs
+    section.offset-top-70.offset-md-top-114
+      .shell
+        .range.range-xs-center
+          .cell-xs-10.cell-lg-12
+            h2.text-bold Button Vertical Tabs
+
+            .offset-top-60
+              +tabs-boxed(["Preschool Education", "Pre-Kindergarten", "Interactive Kindergarten"], "vertical")
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+                div
+                  p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out.
+
+
+    // Accordion
+    section.offset-top-70.offset-md-top-114
+      .shell
+        .range.range-xs-center
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Classic Accordion
+
+            .offset-top-60
+              +accordion-classic(["What ages do you serve?", " Will my child be ready for Kindergarten? ", "Who can pick up my child from school? ", "How can I pay the monthly tuition? "])
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+
+    // Accordion
+    section.offset-top-70.offset-md-top-114
+      .shell
+        .range.range-xs-center
+          .cell-xs-10.cell-lg-8
+            h2.text-bold Modern Accordion
+
+            .offset-top-60
+              +accordion-classic(["What ages do you serve?", " Will my child be ready for Kindergarten? ", "Who can pick up my child from school? ", "How can I pay the monthly tuition? "], "accordion-modern")
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+                div
+                  p Yes.  Our way of teaching, by having the students learn how to learn, prepares them for success in Kindergarten and beyond. They will build the foundation for disciplines and skills they will need later.
+
+
+
+  // Page Footer
+  include ../sections/_section-footer-corporate

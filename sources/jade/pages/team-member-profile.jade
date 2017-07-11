@@ -1,0 +1,129 @@
+extends  ../_skeleton
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+include ../elements/_ui-progress-bar-linear
+//- Title
+block title
+  title= cfg.nav.pages.submenu.about.submenu.teamMemberProfile.title
+//- Page
+block page
+  // Page Header
+  header.page-head
+    //- RD Navbar
+    +rd-navbar-corporate(
+    'rd-navbar-default',
+    {
+      "data-lg-auto-height": "true",
+      "data-md-layout": 'rd-navbar-static',
+      "data-lg-layout": 'rd-navbar-static',
+      "data-lg-stick-up": 'true'
+    },
+    cfg.brand.logoCorporateNavbar,
+    cfg.nav.pages,
+    cfg.nav
+    )
+  +breadcrumb-classic(
+  cfg.nav.pages.submenu.about.submenu.teamMemberProfile.title,
+  {
+    0: {
+      "title": cfg.nav.home.title,
+      "href": cfg.nav.home.href
+    },
+    1: {
+      "title": cfg.nav.pages.title,
+      "href": cfg.nav.pages.href
+    },
+    2: {
+      "title": cfg.nav.pages.submenu.about.title,
+      "href": cfg.nav.pages.submenu.about.href
+    },
+    3: {
+      "title": cfg.nav.pages.submenu.about.submenu.teamMemberProfile.title,
+      "href": cfg.nav.pages.submenu.about.submenu.teamMemberProfile.href
+    }
+  })
+  // Page Content
+  main.page-content
+    //4 Columns Layout
+    section.section-70.section-md-114
+      .shell
+        .range.range-xs-center
+          .cell-sm-4.text-sm-left
+            .inset-sm-right-30
+              img.img-responsive.reveal-inline-block(src="images/users/user-william-barnett-340x340.jpg" width=340 height=340 alt="")
+              .offset-top-15.offset-sm-top-30
+                a(href="#" style="max-width: 340px; margin-left:auto; margin-right:auto").btn.btn-ellipse.btn-primary.btn-block Get in Touch
+              .offset-top-15.offset-sm-top-30
+                ul.list.list-unstyled
+                  li
+                    span.icon.icon-xs.mdi.mdi-phone.text-middle.text-madison
+                    a.reveal-inline-block.text-dark.inset-left-10(href="callto:#") 1-800-1234-567
+                  li
+                    span.icon.icon-xs.mdi.mdi-email-open.text-middle.text-madison
+                    a.reveal-inline-block.inset-left-10(href="mailto:info@demolink.org") info@demolink.org
+              .offset-top-15.offset-sm-top-30
+                ul.list-inline.list-inline-xs.list-inline-madison
+                  li
+                    a(href="#").icon.icon-xxs.fa-facebook.icon-circle.icon-gray-light-filled
+                  li
+                    a(href="#").icon.icon-xxs.fa-twitter.icon-circle.icon-gray-light-filled
+                  li
+                    a(href="#").icon.icon-xxs.fa-google.icon-circle.icon-gray-light-filled
+                  li
+                    a(href="#").icon.icon-xxs.fa-instagram.icon-circle.icon-gray-light-filled
+          .cell-sm-8.text-left
+            div
+              h2.text-bold Walter Myers
+            p.offset-top-10 Head of Kids Tree Summer Camp
+            .offset-top-15.offset-sm-top-30
+              .hr-left-0
+            .offset-top-30.offset-sm-top-60
+              h6.text-bold About Walter
+              .text-subline
+            .offset-top-20
+              p Walter is the Head of Kids Tree Summer Camp and he oversees office and camp operations each season. He has been involved with our summer camp his entire life as a camper, counselor, and director, and in 2001 followed a lifelong dream of moving to our city and taking part in Kids Tree summer activities.
+              p Walter is a frequent speaker and staff trainer at both local and national American Camp Association (ACA) conferences, leading sessions on camp management and child development. He also works closely with local preschools and elementary schools, leading trainings for teachers and support staff on best practices on playground and classroom behavior management, and providing talks for parents on a variety of child-related subjects.
+            .offset-top-30.offset-sm-top-60
+              h6.text-bold Certificates and Awards
+              .text-subline
+            .offset-top-15.offset-sm-top-30
+              .group.group-lg(data-photo-swipe-gallery='gallery')
+                a(data-photo-swipe-item="" href="images/sertificate-100x144.jpg" data-size='347x500')
+                  img.img-responsive.reveal-inline-block(src="images/sertificate-100x144.jpg" width=90 height=144 alt="")
+                a(data-photo-swipe-item="" href="images/sertificate2-100x144.jpg" data-size='347x500')
+                  img.img-responsive.reveal-inline-block(src="images/sertificate2-100x144.jpg" width=90 height=144 alt="")
+                a(data-photo-swipe-item="" href="images/sertificate3-100x144.jpg" data-size='347x500')
+                  img.img-responsive.reveal-inline-block(src="images/sertificate3-100x144.jpg" width=90 height=144 alt="")
+                a(data-photo-swipe-item="" href="images/sertificate4-100x144.jpg" data-size='347x500')
+                  img.img-responsive.reveal-inline-block(src="images/sertificate4-100x144.jpg" width=90 height=144 alt="")
+
+
+    // Classic Skills Bars
+    section.section-70.section-md-114.bg-madison.context-dark
+      .shell
+        h2.text-bold Skill Bars
+
+        .range.range-xs-center.offset-top-65
+          .cell-xs-10.cell-sm-6
+            +progress-bar-linear({
+              "title": "Preschool Education",
+              "valueTo": "70"
+            })
+            .offset-top-56
+              +progress-bar-linear({
+                "title": "Pre-Kindergarten",
+                "valueTo": "42"
+              })
+            .offset-top-56
+              +progress-bar-linear({
+                "title": "Junior Kindergarten",
+                "valueTo": "38"
+              })
+            .offset-top-56
+              +progress-bar-linear({
+                "title": "Summer Activities",
+                "valueTo": "94"
+              })
+            .offset-top-20
+  // Page Footer
+  include ../sections/_section-footer-corporate
