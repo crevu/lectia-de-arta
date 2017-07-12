@@ -7,7 +7,7 @@ include ../elements/_ui-thumbnail-classic
 
 //- Title
 block title
-  title= cfg.nav.campus.submenu.masonryGallery.title
+  title= cfg.nav.campus.title
 
 //- Page
 block page
@@ -38,10 +38,6 @@ block page
     1: {
       "title": cfg.nav.campus.title,
       "href": cfg.nav.campus.href
-    },
-    2: {
-      "title": cfg.nav.campus.submenu.masonryGallery.title,
-      "href": cfg.nav.campus.submenu.masonryGallery.href
     }
   })
 
@@ -51,8 +47,6 @@ block page
     // Portfolio Grid
     section
       .shell
-        h2 Masonry Gallery
-
         .offset-top-60
           .range.range-xs-center(data-photo-swipe-gallery="gallery")
             .cell-xs-6.cell-sm-4
