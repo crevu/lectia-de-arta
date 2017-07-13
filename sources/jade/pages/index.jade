@@ -227,6 +227,7 @@ block page
         a.thumbnail-default.thumbnail-flickr(data-photo-swipe-item="" href="" data-image_c='href' data-size="320x320" data-type='flickr-item')
           img(width="320" height="320" data-title='alt', src='images/_blank.png', alt='', "data-image_z"= "src")
           span.icon.fa-search-plus
+
     // Contact info
     section.section-60
       .shell
@@ -249,17 +250,19 @@ block page
                 span.icon.icon-contact-sm.text-madison.mdi.mdi-email-open
               .unit-body
                 a(href='mailto:#').h6.text-regular mail@demolink.org
+
     // Google map
     section
       +rd-map({
-        "zoom": "14",
-        "dataX": "-73.9874068",
-        "dataY": "40.643180",
-        "dataStyles": [{
-          "featureType": "administrative",
-          "elementType": "labels.text.fill",
-          "stylers": [{"color": "#444444"}]
-        }, {"featureType": "landscape", "elementType": "all", "stylers": [{"color": "#f2f2f2"}]}, {
+        "zoom": "15",
+        "dataX": "26.140433",
+        "dataY": "44.452702",
+        "dataStyles": [
+        {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [{"color": "#f2f2f2"}]
+        }, {
           "featureType": "poi",
           "elementType": "all",
           "stylers": [{"visibility": "off"}]
@@ -283,11 +286,16 @@ block page
           "featureType": "transit",
           "elementType": "all",
           "stylers": [{"visibility": "off"}]
-        }, {"featureType": "water", "elementType": "all", "stylers": [{"color": "#b4d4e1"}, {"visibility": "on"}]}]
+        }, {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [{"color": "#b4d4e1"}, {"visibility": "on"}]
+        }
+      ]
       },[{
-        "dataX": "-73.9874068",
-        "dataY": "40.643180",
-        "markerDesc": "9870 St Vincent Place, Glasgow"
+        "dataX": "26.140433",
+        "dataY": "44.452702",
+        "markerDesc": "Strada Heliade intre vii nr. 13"
       }])
 
   // Modal
